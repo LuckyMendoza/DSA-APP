@@ -1,0 +1,94 @@
+/* Header container height setting */
+.header-sticky nav.navbar {
+  height: 80px; /* Fixed navbar height */
+  position: relative;
+  transition: all 0.3s ease;
+  background: var(--accent-color) !important;
+  z-index: 1000;
+}
+
+/* Navbar on scroll - with gradient background and fixed position */
+.header-sticky.sticky nav.navbar {
+  background: var(--accent-color) !important; /* Gradient on scroll */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  animation: slideDown 0.3s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Override the header background */
+header.main-header {
+  background: transparent !important;
+  border-bottom: none;
+}
+
+/* Fix footer background color */
+.main-footer {
+  background: var(--accent-color) !important;
+  background-image: url("../images/footer-bg.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 100% auto !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add overlay to ensure gradient shows through */
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent-color);
+  z-index: -1;
+}
+
+/* Custom logo size for header logo */
+.logo-img {
+  height: 100%; /* Logo will always fit the navbar height */
+  width: 170px; /* Maintain aspect ratio */
+  max-width: 350px; /* Optional: limit how wide the logo can get */
+  object-fit: contain;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 15px;
+  height: 100%;
+}
+
+.navbar-brand > .logo-img {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Menu alignment - keep it centered vertically */
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+/* Testimonial rating color */
+
+.testimonial-rating i.fa-star {
+  color: #ffd700; /* Yellow gold color for stars */
+}
