@@ -18,3 +18,15 @@ Route::get('/run-artisan', function () {
 
     abort(403);
 });
+
+Route::get('/run-artisan', function () {
+    $key = request('key');
+    $command = request('command');
+
+    if ($key !== 'supersecretkey123') {
+        abort(403, 'Unauthorized');
+    }
+
+    Artisan::call($command);
+    return Artisan::output();
+});
