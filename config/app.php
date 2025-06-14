@@ -52,7 +52,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    // 'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://dsa-app-production-205e.up.railway.app'),
 
     /*
     |--------------------------------------------------------------------------
