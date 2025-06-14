@@ -12,3 +12,4 @@ jobs:
       - name: Call Laravel Artisan Route
         run: |
           curl --silent https://dsa-app-production-205e.up.railway.app/run-artisan?key=supersecretkey123
+ 
