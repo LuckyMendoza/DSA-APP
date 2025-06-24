@@ -1,0 +1,1 @@
+this is studios page to be implemented

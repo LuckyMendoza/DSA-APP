@@ -2,31 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\homeController;
 
-Route::view('/', 'home.index');
+// All static pages routes using PageController
+Route::controller(homeController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/about', 'about')->name('about'); 
+    Route::get('/services', 'services')->name('services');
+    Route::get('/contact', 'contact')->name('contact');
+    Route::get('/designers', 'designers')->name('designers');
+    Route::get('/studios', 'studios')->name('studios');
 
-Route::get('/run-artisan', function () {
-    if (
-        app()->environment('production') &&
-        request()->query('key') === env('DEPLOY_KEY')
-    ) {
-        Artisan::call('optimize:clear');
-        Artisan::call('config:cache');
-        Artisan::call('migrate', ['--force' => true]);
-        return '✔ Artisan commands executed!';
-    }
+  
 
-    abort(403);
 });
 
-Route::get('/run-artisan', function () {
-    $key = request('key');
-    $command = request('command');
-
-    if ($key !== 'supersecretkey123') {
-        abort(403, 'Unauthorized');
-    }
-
-    Artisan::call($command);
-    return Artisan::output();
-});
