@@ -1,6 +1,6 @@
 
     <!-- How It Work Section Start -->
-    <div class="how-it-work">
+    <div class="how-it-work" id="how-it-works">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

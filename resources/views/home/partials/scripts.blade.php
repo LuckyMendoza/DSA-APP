@@ -37,3 +37,61 @@
     <!-- Navbar Scroll Effect js -->
     <script src="{{ asset('assets/home/js/navbar-scroll.js') }}"></script>
     <script src="{{ asset('assets/home/js/particles-animation.js') }}"></script>
+
+    <!-- Smooth Scrolling for Anchor Links -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links with hash
+            $('a[href^="#"]').on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 100 // Offset for fixed header
+                    }, 800, function() {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Back to Top Button Script -->
+    <script>
+        $(document).ready(function() {
+            // Initially hide the button
+            $('.back-to-top').css({
+                'opacity': '0',
+                'visibility': 'hidden'
+            });
+
+            // Show or hide the back-to-top button based on scroll position
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').css({
+                        'opacity': '1',
+                        'visibility': 'visible'
+                    });
+                } else {
+                    $('.back-to-top').css({
+                        'opacity': '0',
+                        'visibility': 'hidden'
+                    });
+                }
+            });
+
+            // Smooth scroll to top when button is clicked
+            $('.back-to-top').click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+    </script>

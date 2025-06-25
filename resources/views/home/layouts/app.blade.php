@@ -38,5 +38,11 @@
     @include('home.partials.scripts')
     <!--scripts end--->
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!-- End Back to Top Button -->
+
 </body>
 </html>

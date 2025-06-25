@@ -1,6 +1,6 @@
 
     <!-- Hero Section Start -->
-    <div class="hero hero-bg-image dark-section parallaxie">
+    <div class="hero hero-bg-image dark-section parallaxie" id="home">
         <!-- Particles Container -->
         <div id="particles-container"></div>
         

@@ -44,25 +44,22 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home </a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="{{ route('services') }}">Services</a>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#about">About Us</a></li>
+                            <li class="nav-item submenu"><a class="nav-link" href="{{ route('home') }}#services">Services</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('designers') }}">For
-                                            Designers</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('studios') }}">For
-                                            Studios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#designers">For Designers</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#studios">For Studios</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item submenu"><a class="nav-link" href="#">Discover</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="#">ServiceDetails</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
-
+                                    <li class="nav-item"><a class="nav-link" href="#">Service Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#faqs">FAQs</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}#contact">Contact Us</a></li>
                         </ul>
                     </div>
 

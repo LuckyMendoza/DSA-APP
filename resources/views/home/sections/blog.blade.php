@@ -1,5 +1,5 @@
   <!-- Our Blog Section Start -->
-  <div class="our-blog">
+  <div class="our-blog" id="blog">
     <div class="container">
         <div class="row section-row align-items-center">
             <div class="col-lg-6">

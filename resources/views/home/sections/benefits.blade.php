@@ -1,5 +1,5 @@
  <!-- Our Benefits Section Start -->
- <div class="our-benefits">
+ <div class="our-benefits" id="benefits">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">

@@ -1,6 +1,6 @@
 
     <!-- Our Services Section Start -->
-    <div class="our-services">
+    <div class="our-services" id="services">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-6">
@@ -15,7 +15,7 @@
                 <div class="col-lg-6">
                     <!-- Service Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="services.html" class="btn-default">view all services</a>
+                        <a href="#services" class="btn-default">view all services</a>
                     </div>
                     <!-- Service Button End -->
                 </div>
@@ -30,11 +30,11 @@
                                 <img src="{{ asset('assets/home/images/icon-service-1.svg') }}" alt="">
                             </div>
                             <div class="service-item-content">
-                                <h3><a href="service-single.html">Designer Placement</a></h3>
+                                <h3><a href="#designers">Designer Placement</a></h3>
                                 <p>We connect talented architects and designers with firms that match their creative vision and career goals.</p>
                             </div>
                             <div class="service-readmore-btn">
-                                <a href="service-single.html" class="readmore-btn">read more</a>
+                                <a href="#designers" class="readmore-btn">read more</a>
                             </div>
                         </div>
                     </div>
@@ -49,11 +49,11 @@
                                 <img src="{{ asset('assets/home/images/icon-service-2.svg') }}" alt="">
                             </div>
                             <div class="service-item-content">
-                                <h3><a href="service-single.html">Studio Staffing</a></h3>
+                                <h3><a href="#studios">Studio Staffing</a></h3>
                                 <p>We help architectural firms build dynamic teams with the right mix of skills and creative perspectives.</p>
                             </div>
                             <div class="service-readmore-btn">
-                                <a href="service-single.html" class="readmore-btn">read more</a>
+                                <a href="#studios" class="readmore-btn">read more</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-                        <p><span>free</span>Ready to elevate your architectural career or studio? - <a href="contact.html">Get in touch today!</a></p>
+                        <p><span>free</span>Ready to elevate your architectural career or studio? - <a href="#contact">Get in touch today!</a></p>
                     </div>
                     <!-- Section Footer Text End -->
                 </div>

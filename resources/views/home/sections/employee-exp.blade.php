@@ -3,7 +3,7 @@
 
 
     <!-- Company Success Section Start -->
-    <div class="company-success">
+    <div class="company-success" id="employee-exp">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-6">
@@ -19,7 +19,7 @@
                 <div class="col-lg-6">
                     <!-- Service Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="contact.html" class="btn-default">contact us</a>
+                        <a href="{{ route('contact') }}" class="btn-default">contact us</a>
                     </div>
                     <!-- Service Button End -->
                 </div>

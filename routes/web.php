@@ -2,18 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\homeController;
+// use App\Http\Controllers\homeController;
 
-// All static pages routes using PageController
-Route::controller(homeController::class)->group(function () {
-    Route::get('/', 'home')->name('home');
-    Route::get('/about', 'about')->name('about'); 
-    Route::get('/services', 'services')->name('services');
-    Route::get('/contact', 'contact')->name('contact');
-    Route::get('/designers', 'designers')->name('designers');
-    Route::get('/studios', 'studios')->name('studios');
-
+// Group all static page routes
+Route::prefix('/')->group(function () {
   
+    Route::view('/', 'home.index')->name('home');
+    Route::view('about', 'home.sections.about')->name('about');
+    Route::view('services', 'home.sections.services')->name('services');
+    Route::view('designers', 'home.sections.designers')->name('designers');
+    Route::view('studios', 'home.sections.studios')->name('studios');
+    Route::view('contact', 'home.sections.contact')->name('contact');
 
+    Route::view('faqs', 'home.sections.faqs')->name('faqs');
 });
-
