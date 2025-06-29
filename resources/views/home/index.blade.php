@@ -14,6 +14,6 @@
     @include('home.sections.testimonials')
     @include('home.sections.faqs')
     @include('home.sections.blog')
-    @include('home.sections.contact')
+    {{-- @include('home.sections.contact') --}}
     @include('home.sections.scrolling-bottom')
 @endsection

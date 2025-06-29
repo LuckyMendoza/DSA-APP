@@ -1,6 +1,4 @@
 
-   
-
     <!-- Jquery Library File -->
     <script src="{{ asset('assets/home/js/jquery-3.7.1.min.js') }}"></script>
     <!-- Bootstrap js file -->
@@ -93,5 +91,95 @@
                 $('html, body').animate({ scrollTop: 0 }, 800);
                 return false;
             });
+        });
+    </script>
+
+    <!-- Contact Form Script -->
+    <script>
+        $(document).ready(function() {
+            // Contact form validation and submission
+            $('#contactForm').submit(function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                let isValid = true;
+                const subject = $('#subject').val();
+                const fullName = $('#fullName').val();
+                const email = $('#email').val();
+                const phone = $('#phone').val();
+                const message = $('#message').val();
+                const privacyCheck = $('#privacyCheck').is(':checked');
+                
+                // Reset previous error states
+                $('.is-invalid').removeClass('is-invalid');
+                
+                // Validate each field
+                if (!subject || subject === '---Please choose an option---') {
+                    $('#subject').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!fullName) {
+                    $('#fullName').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!email || !isValidEmail(email)) {
+                    $('#email').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!phone || !isValidPhone(phone)) {
+                    $('#phone').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!message) {
+                    $('#message').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                if (!privacyCheck) {
+                    $('#privacyCheck').addClass('is-invalid');
+                    isValid = false;
+                }
+                
+                // If valid, submit the form
+                if (isValid) {
+                    // Here you would normally send an AJAX request to your backend
+                    // For now, we'll just show a success message
+                    
+                    // Show loading state
+                    const submitBtn = $(this).find('button[type="submit"]');
+                    const originalText = submitBtn.text();
+                    const originalHtml = submitBtn.html();
+                    submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...');
+                    
+                    // Simulate AJAX request
+                    setTimeout(function() {
+                        // Reset form
+                        $('#contactForm')[0].reset();
+                        
+                        // Show success message
+                        alert('Thank you! Your message has been sent successfully.');
+                        
+                        // Reset button
+                        submitBtn.prop('disabled', false).html(originalHtml);
+                    }, 1500);
+                }
+            });
+            
+            // Email validation helper
+            function isValidEmail(email) {
+                const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return regex.test(email);
+            }
+            
+            // Phone validation helper (Philippines format)
+            function isValidPhone(phone) {
+                // Allow +63 format or 09 format
+                const regex = /^(\+63|09|\+639)\d{9,10}$/;
+                return regex.test(phone.replace(/\s+/g, ''));
+            }
         });
     </script>

@@ -14,5 +14,7 @@ Route::prefix('/')->group(function () {
     Route::view('studios', 'home.sections.studios')->name('studios');
     Route::view('contact', 'home.sections.contact')->name('contact');
 
+    Route::view('inquire', 'home.sections.inquire')->name('inquire');
+
     Route::view('faqs', 'home.sections.faqs')->name('faqs');
 });

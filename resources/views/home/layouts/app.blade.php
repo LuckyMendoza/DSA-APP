@@ -30,6 +30,8 @@
     </main>
     <!-- Section End -->
 
+    
+
     <!--footer-->
     @include('home.partials.footer')
     <!--footer end-->

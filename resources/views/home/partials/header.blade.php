@@ -6,7 +6,7 @@
                 <!-- Topbar Contact Information Start -->
                 <div class="topbar-contact-info">
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-envelope"></i>talent@architectstudio.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i>worklink.solution.site@gmail.com</a></li>
                         <li><a href="#"><i class="fa-solid fa-phone"></i>+123 465 789</a></li>
                     </ul>
                 </div>
@@ -36,7 +36,7 @@
             <div class="container">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="./">
-                    <img src="{{ asset('assets/home/images/DSA_LOGO.png') }}" alt="Logo" class="logo-img">
+                    <img src="{{ asset('assets/home/images/worklink-solution-logo.png') }}" alt="Logo" class="logo-img" style="max-height: 60px; width: auto;">
                 </a>
                 <!-- Logo End -->
 
@@ -65,7 +65,7 @@
 
                     <!-- Header Btn Start -->
                     <div class="header-btn">
-                        <a href="#" class="btn-default btn-highlighted">Get Started</a>
+                        <a href="{{ route('inquire') }}" class="btn-default btn-highlighted"><i class="fa-solid fa-envelope me-2"></i>Inquire Now</a>
                     </div>
                     <!-- Header Btn End -->
                 </div>

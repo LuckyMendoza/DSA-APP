@@ -1,61 +1,161 @@
-<!-- FAQs Section Start -->
-<div class="faqs-section section-padding" id="faqs">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Find answers to common questions</p>
+
+    <!-- Our Faqs Section Start -->
+    <div class="our-faqs">
+        <div class="container">
+            
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">faq</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Your questions answered HR <span>solutions
+                                simplified</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Service Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="faqs.html" class="btn-default">view all faqs</a>
+                    </div>
+                    <!-- Service Button End -->
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="accordion" id="faqAccordion">
-                    <!-- FAQ Item 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                How does the designer-studio matching process work?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our matching process begins with a thorough assessment of both the designer's portfolio and career goals, and the studio's design philosophy and team needs. We use this information to create connections that have the highest potential for success.
+
+            <div class="row align-items-center">
+            
+                <div class="col-lg-6">
+                    <!-- Faqs Image Start -->
+                    <div class="faqs-image">
+                        <div class="faqs-img">
+                            <figure class="image-anime reveal">
+                                <img src="{{ asset('assets/home/images/faqs-image.jpg') }}" alt="">
+                            </figure>
+                        </div>
+
+                        <!-- Faqs Contact Circle Start -->
+                        <div class="faq-contact-circle">
+                            <a href="contact.html">
+                                <img src="{{ asset('assets/home/images/contact-us-circle-1.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <!-- Faqs Contact Circle End -->
+
+                        <!-- Faqs CTA Box Start -->
+                        <div class="faqs-cta-box">
+                            <div class="icon-box">
+                                <img src="{{ asset('assets/home/images/icon-faqs-cta.svg') }}" alt="">
+                            </div>
+                            <div class="faqs-cta-box-content">
+                                <h3>Your HR Questions, Answered by Experts</h3>
                             </div>
                         </div>
+                        <!-- Faqs CTA Box End -->
                     </div>
-                    
-                    <!-- FAQ Item 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                What types of architectural roles do you help fill?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We help fill a wide range of architectural positions, from junior designers to senior architects, project managers, and specialized roles such as visualization experts and sustainability specialists.
+                    <!-- Faqs Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Faqs Content Start -->
+                    <div class="faqs-content">
+                        <!-- FAQ Accordion Start -->
+                        <div class="faq-accordion" id="faqaccordion">
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        How do I get started with your services?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a range of HR solutions, including recruitment services, employee
+                                            training and development.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How can designers improve their portfolios?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We recommend focusing on quality over quantity, highlighting your unique design approach, including process work, and tailoring your portfolio to the specific studios you're interested in. Our portfolio development service provides personalized guidance.
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        What services does your HR agency provide?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a range of HR solutions, including recruitment services, employee
+                                            training and development.</p>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        How do I apply for a job through your platform?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a range of HR solutions, including recruitment services, employee
+                                            training and development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Do you offer employee training programs?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a range of HR solutions, including recruitment services, employee
+                                            training and development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        What industries do you specialize in?
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a range of HR solutions, including recruitment services, employee
+                                            training and development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
                         </div>
+                        <!-- FAQ Accordion End -->
                     </div>
+                    <!-- Faqs Content End -->
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- FAQs Section End -->
+    <!-- Our Faqs Section End -->

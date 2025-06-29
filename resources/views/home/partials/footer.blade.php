@@ -89,7 +89,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="footer-contact-content">
-                                <p><a href="mailto:talent@architectstudio.com">talent@architectstudio.com</a></p>
+                                <p><a href="mailto:worklink.solution.site@gmail.com">worklink.solution.site@gmail.com</a></p>
                             </div>
                         </div>
                         <!-- Footer Contact Item End -->
@@ -100,7 +100,7 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div class="footer-contact-content">
-                                <p>4140 Parker Rd. Allentown, New Mexico 31134</p>
+                                <p>Robinsons Cyberscape Alpha, Garnet Road, Ortigas Center, Pasig City, Metro Manila, Philippines</p>
                             </div>
                         </div>
                         <!-- Footer Contact Item End -->
