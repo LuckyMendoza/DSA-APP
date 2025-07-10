@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-// use App\Http\Controllers\homeController;
+use App\Http\Controllers\contactFormController;
 
 // Group all static page routes
 Route::prefix('/')->group(function () {
@@ -13,8 +13,9 @@ Route::prefix('/')->group(function () {
     Route::view('designers', 'home.sections.designers')->name('designers');
     Route::view('studios', 'home.sections.studios')->name('studios');
     Route::view('contact', 'home.sections.contact')->name('contact');
-
     Route::view('inquire', 'home.sections.inquire')->name('inquire');
 
+    Route::get('inquiry/send', [contactFormController::class, 'inquirySend'])->name('inquiry.send');
+
     Route::view('faqs', 'home.sections.faqs')->name('faqs');
-});
+});     

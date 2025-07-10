@@ -38,7 +38,9 @@
                 <div class="row g-0">
                     <div class="col-lg-6">
                         <div class="contact-form-wrapper bg-white p-4 h-100">
-                            <form class="inquiry-form p-3">
+                            <form class="inquiry-form p-3" method="POST" action="{{ route('inquiry.send') }}" >
+                                
+                                @csrf
                                 <div class="mb-3">
                                     <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
                                     <select class="form-control form-select" id="subject" required>
