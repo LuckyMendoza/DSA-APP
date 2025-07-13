@@ -15,7 +15,8 @@ Route::prefix('/')->group(function () {
     Route::view('contact', 'home.sections.contact')->name('contact');
     Route::view('inquire', 'home.sections.inquire')->name('inquire');
 
-    Route::get('inquiry/send', [contactFormController::class, 'inquirySend'])->name('inquiry.send');
+
 
     Route::view('faqs', 'home.sections.faqs')->name('faqs');
 });     
+Route::post('inquiry/send', [contactFormController::class, 'inquirySend'])->name('inquiry.send');

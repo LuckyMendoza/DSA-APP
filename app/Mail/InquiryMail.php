@@ -9,16 +9,18 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class inquiryFormMail extends Mailable
+class InquiryMail extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $inquiryData;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($inquiryData)
     {
-        //
+        $this->inquiryData = $inquiryData;
     }
 
     /**
@@ -27,7 +29,7 @@ class inquiryFormMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Inquiry Form Mail',
+            subject: 'New Inquiry: ' . $this->inquiryData['subject'],
         );
     }
 
@@ -37,7 +39,10 @@ class inquiryFormMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.inquiry',
+            with: [
+                'data' => $this->inquiryData,
+            ],
         );
     }
 
