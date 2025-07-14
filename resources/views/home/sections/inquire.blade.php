@@ -63,32 +63,44 @@
                         <form class="inquiry-form p-3" method="POST" action="{{ route('inquiry.send') }}">
                             @method('POST')
                             @csrf
+
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Subject <span
                                         class="text-danger">*</span></label>
-                                <select class="form-control form-select" id="subject" name="subject" required>
+                                <select class="form-control form-select" id="subject" name="subject"
+                                    value="{{ old('subject') }}" @error('subject') is-invalid @enderror>
                                     <option selected disabled>---Please choose an option---</option>
                                     <option value="General Inquiry" {{ old('subject')=='General Inquiry' ? 'selected'
-                                        : '' }}>General Inquiry</option>
+                                        : '' }}>
+                                        General Inquiry
+                                    </option>
                                     <option value="Service Request" {{ old('subject')=='Service Request' ? 'selected'
-                                        : '' }}>Service Request</option>
+                                        : '' }}>
+                                        Service Request
+                                    </option>
                                     <option value="Job Application" {{ old('subject')=='Job Application' ? 'selected'
-                                        : '' }}>Job Application</option>
+                                        : '' }}>
+                                        Job Application
+                                    </option>
                                     <option value="Partnership Opportunity" {{ old('subject')=='Partnership Opportunity'
-                                        ? 'selected' : '' }}>Partnership Opportunity</option>
+                                        ? 'selected' : '' }}>
+                                        Partnership Opportunity
+                                    </option>
                                 </select>
-                                
+                                @if ($errors->has('subject'))
+                                <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                @endif
                             </div>
 
                             <div class="mb-3">
                                 <label for="fullName" class="form-label">Full Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('fullName') is-invalid @enderror"
-                                    id="fullName" name="fullName" placeholder="Enter your full name"
-                                    value="{{ old('fullName') }}" >
-                                @error('fullName')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <input type="text" name="fullName" class="form-control" id="fullName"
+                                    placeholder="Enter your full name" value="{{ old('fullName') }}" @error('fullName')
+                                    is-invalid @enderror>
+                                @if ($errors->has('fullName'))
+                                <span class="text-danger">{{ $errors->first('fullName') }}</span>
+                                @endif
                             </div>
 
                             <div class="row">
@@ -96,25 +108,24 @@
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email Address <span
                                                 class="text-danger">*</span></label>
-                                        <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                            id="email" name="email" placeholder="Enter active email"
-                                            value="{{ old('email') }}" >
-                                        @error('email')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Enter active email" value="{{ old('email') }}" @error('email')
+                                            is-invalid @enderror>
+                                        @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="contactNumber" class="form-label">Contact Number <span
                                                 class="text-danger">*</span></label>
-                                        <input type="tel"
-                                            class="form-control @error('contactNumber') is-invalid @enderror"
-                                            id="contactNumber" name="contactNumber" placeholder="Ex: 09XXXXXXXXX"
-                                            value="{{ old('contactNumber') }}">
-                                        @error('contactNumber')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        <input type="tel" class="form-control" id="contactNumber" name="contactNumber"
+                                            placeholder="Ex: 09XXXXXXXXX" value="{{ old('contactNumber') }}"
+                                            @error('contactNumber') is-invalid @enderror>
+                                        @if ($errors->has('contactNumber'))
+                                        <span class="text-danger">{{ $errors->first('contactNumber') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -122,19 +133,23 @@
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message <span
                                         class="text-danger">*</span></label>
-                                <textarea class="form-control @error('message') is-invalid @enderror" id="message"
-                                    name="message" rows="5" placeholder="Type your message here..."
-                                    >{{ old('message') }}</textarea>
-                                @error('message')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <textarea class="form-control" id="message" name="message" rows="5"
+                                    placeholder="Type your message here..." @error('message') is-invalid
+                                    @enderror>{{ old('message') }}</textarea>
+                                @if ($errors->has('message'))
+                                <span class="text-danger">{{ $errors->first('message') }}</span>
+                                @endif
                             </div>
 
                             <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" name="privacy"
+                                    @error('privacy') is-invalid @enderror>
+                                @if ($errors->has('privacy'))
+                                <span class="text-danger">{{ $errors->first('privacy') }}</span>
+                                @endif
                                 <label class="form-check-label" for="privacyCheck">
-                                    I have read and accepted MediCard Philippines, Inc.'s <a href="#"
-                                        class="text-primary">Privacy Statement</a>.
+                                    I have read and accepted MediCard Philippines, Inc.'s
+                                    <a href="#" class="text-primary">Privacy Statement</a>.
                                 </label>
                             </div>
 
@@ -144,7 +159,6 @@
                             </div>
                         </form>
                     </div>
-
 
 
 
