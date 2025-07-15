@@ -36,7 +36,7 @@
             <div class="container">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="./">
-                    <img src="{{ asset('assets/home/images/worklink-solution-logo.png') }}" alt="Logo" class="logo-img" style="max-height: 60px; width: auto;">
+                    <img src="{{ asset('assets/home/images/workLink_final_logo.png') }}" alt="Logo" class="logo-img" style="max-height: 60px; width: auto;">
                 </a>
                 <!-- Logo End -->
 
