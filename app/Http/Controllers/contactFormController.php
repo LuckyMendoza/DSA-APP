@@ -63,7 +63,7 @@ class ContactFormController extends Controller
                 ->send(new AutoReplyMail($inquiryData));
 
             // Redirect back with success message
-            return redirect()->back()->with('success', 'Your inquiry has been sent successfully! Please check your email for confirmation.');
+            return redirect()->back()->with('success', 'Your inquiry has been sent successfully! Please check your email.');
             
         } catch (\Exception $e) {
             // Handle email sending failure
