@@ -36,7 +36,7 @@
             <div class="container">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="./">
-                    <img src="{{ asset('assets/home/images/worklink-solution-logo.png') }}" alt="Logo" class="logo-img" style="max-height: 60px; width: auto;">
+                    <img src="{{ asset('assets/home/images/final-logona.png') }}" alt="Logo" class="logo-img" style="max-height: 120px; width: auto; margin-top: 10px;">
                 </a>
                 <!-- Logo End -->
 
@@ -77,3 +77,4 @@
     </div>
 </header>
 <!-- Header End -->
+
