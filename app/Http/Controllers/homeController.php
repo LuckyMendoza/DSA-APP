@@ -8,7 +8,7 @@ class homeController extends Controller
 {
     public function home()
     {
-        return view('home.in    dex');
+        return view('home.index');
     }
 
     public function about()
@@ -36,10 +36,7 @@ class homeController extends Controller
     {
         return view('home.sections.studios');
     }
+
     
     
-    
-
-
-
 }

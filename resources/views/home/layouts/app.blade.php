@@ -23,6 +23,7 @@
     <!-- Header Start -->
     @include('home.partials.header')
     <!-- Header End -->
+    
 
     <!-- Section Start -->
     <main>
@@ -30,13 +31,17 @@
     </main>
     <!-- Section End -->
 
-    
+
 
     <!--footer-->
     @include('home.partials.footer')
     <!--footer end-->
 
     <!--scripts--->
+
+
+
+    
     @include('home.partials.scripts')
     <!--scripts end--->
 

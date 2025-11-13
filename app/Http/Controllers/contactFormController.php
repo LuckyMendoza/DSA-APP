@@ -37,7 +37,7 @@ class ContactFormController extends Controller
                 ->send(new InquiryMail($request->all()));
 
             return redirect()->back()->with('success', 'Your inquiry has been sent successfully! We will get back to you soon.');
-        } catch (\Exception $e) {
+        } catch (\Exception $e) {r
             // Log the error for debugging
             // dd($e->getMessage());
             return redirect()->back()->with('error', 'Sorry, there was an error sending your inquiry. Please try again later.');

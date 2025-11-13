@@ -1,6 +1,6 @@
 
     <!-- Why Choose us Section Start -->
-    <div class="why-choose-us">
+    <div class="why-choose-us" id="why-choose-us">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
