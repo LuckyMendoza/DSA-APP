@@ -1,6 +1,5 @@
-
-
-FROM wyveo/nginx-php-fpm:php82  # Or php81 kung Laravel version mo needs it; check your composer.json
+# Or php81 kung Laravel version mo needs it; check your composer.json (e.g., Laravel 11 needs PHP 8.2, Laravel 10 needs 8.1)
+FROM wyveo/nginx-php-fpm:php82
 
 WORKDIR /usr/share/nginx/html
 
