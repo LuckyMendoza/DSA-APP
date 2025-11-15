@@ -1,29 +1,31 @@
-# Or php81 kung Laravel version mo needs it; check your composer.json (e.g., Laravel 11 needs PHP 8.2, Laravel 10 needs 8.1)
+# Use php82 for Laravel 10+; palitan sa php81 kung older version
 FROM wyveo/nginx-php-fpm:php82
 
 WORKDIR /usr/share/nginx/html
 
-# Copy your Laravel app files
+# Copy Laravel files
 COPY . .
 
-# Install dependencies if needed (but base image handles most)
+# Install dependencies
 RUN composer install --optimize-autoloader --no-dev --no-scripts
 
-# Set permissions for storage and cache
-RUN chown -R www-data storage
-RUN chown -R www-data bootstrap/cache
+# Set permissions
+RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Make the deploy script executable (we'll create this next)
+# Make deploy script executable
 RUN chmod +x 00-laravel-deploy.sh
 
-# Environment variables for the image (Render-specific)
+# Remove default index.html to avoid serving it
+RUN rm -f index.html
+
+# Wyveo/Render-specific envs (IMPORTANT: WEBROOT para sa Laravel /public)
 ENV SKIP_COMPOSER 1
 ENV WEBROOT /usr/share/nginx/html/public
 ENV PHP_ERRORS_STDERR 1
 ENV RUN_SCRIPTS 1
 ENV REAL_IP_HEADER 1
 
-# Laravel-specific env (adjust as needed)
+# Laravel defaults (overridden by Render env vars if needed)
 ENV APP_ENV production
 ENV APP_DEBUG false
 ENV LOG_CHANNEL stderr
